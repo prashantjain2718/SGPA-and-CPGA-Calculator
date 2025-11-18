@@ -1,493 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>RTU CGPA Calculator | Accurate SGPA & CGPA Calculator for RTU Students</title>
+<head>
+  <title>RTU CGPA Calculator | Accurate SGPA & CGPA Calculator for RTU Students</title>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <!-- Primary SEO -->
-    <meta name="description" content="RTU CGPA Calculator for quick and accurate SGPA & CGPA calculation using RTU's official grading system. Fast, responsive, and easy to use.">
-    <meta name="keywords" content="RTU CGPA Calculator, RTU SGPA Calculator, RTU CGPA, RTU Result Calculator, Rajasthan Technical University CGPA, RTU Grade Calculator">
+  <!-- Primary SEO -->
+  <meta name="description" content="RTU CGPA Calculator to quickly calculate SGPA, CGPA and grades using RTU's official grading system. Supports all RTU branches including CSE, IT, AI&DS, ECE, EE, ME. Fast, accurate and easy to use.">
+  <meta name="keywords" content="RTU CGPA Calculator, RTU SGPA Calculator, RTU grade calculator, RTU marks, rtu percentage to cgpa, rtu engineering calculator">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://rtu-cpga-calculator.vercel.app/" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://rtu-cpga-calculator.vercel.app/" />
 
-    <!-- Preload styles for faster rendering -->
-    <link rel="preload" href="styles.css" as="style" />
-    <link rel="stylesheet" href="styles.css" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="RTU CGPA Calculator" />
+  <meta property="og:description" content="Calculate SGPA, CGPA and grades instantly using RTU's official grading system." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rtu-cpga-calculator.vercel.app/" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="RTU CGPA Calculator" />
-    <meta property="og:description" content="Calculate SGPA, CGPA, and grades instantly using RTU’s official grading system." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rtu-cpga-calculator.vercel.app/" />
-    <meta property="og:image" content="https://rtu-cpga-calculator.vercel.app/preview.png" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="RTU CGPA Calculator" />
-    <meta name="twitter:description" content="Fast and accurate CGPA/SGPA calculator for RTU students." />
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "RTU CGPA Calculator",
-      "url": "https://rtu-cpga-calculator.vercel.app/",
-      "description": "Accurate online RTU CGPA & SGPA calculator using official RTU grading rules.",
-      "applicationCategory": "EducationalApplication",
-      "creator": {
-        "@type": "Person",
-        "name": "Prashant Jain"
-      }
+  <!-- SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "RTU CGPA Calculator",
+    "url": "https://rtu-cpga-calculator.vercel.app/",
+    "applicationCategory": "EducationalApplication",
+    "description": "Accurate RTU CGPA and SGPA calculator for all branches including CSE, IT, AI&DS, ECE, EE and ME.",
+    "creator": {
+      "@type": "Person",
+      "name": "Prashant Jain"
     }
-    </script>
-  </head>
+  }
+  </script>
 
-  <body>
-    <div class="wrap">
-      <div class="card" role="application" aria-label="SGPA CGPA Calculator">
-        <header>
-          <div class="logo" aria-hidden="true">RTU</div>
-          <div>
-            <h1>RTU CGPA Calculator</h1>
-            <div class="lead">
-              Select branch & semester, adjust grades, get SGPA/CGPA.
-            </div>
-          </div>
-        </header>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-        <div class="controls">
-          <label for="branchSelect" class="small-muted">
-            Branch
-            <select id="branchSelect" aria-label="Select branch"></select>
-          </label>
-          <label for="semesterSelect" class="small-muted">
-            Semester
-            <select id="semesterSelect" aria-label="Select semester"></select>
-          </label>
+<body>
 
-          <div style="flex: 1"></div>
+  <!-- ========================= -->
+  <!-- ⭐ SEO CONTENT (ABOVE TOOL) -->
+  <!-- ========================= -->
+  <section class="seo-section">
+    <h1>RTU CGPA Calculator – Fast & Accurate SGPA/CGPA Calculation</h1>
+    <p>
+      This RTU CGPA Calculator instantly calculates your <strong>SGPA</strong> and <strong>CGPA</strong> using the official Rajasthan Technical University grading rules.
+      It supports all engineering branches including <strong>CSE, IT, AI&DS, ECE, EE, ME</strong>.
+    </p>
 
-          <button
-            id="resetGrades"
-            class="btn secondary"
-            title="Reset grades to default"
-          >
-            Reset grades
-          </button>
+    <h2>How SGPA is Calculated (RTU Formula)</h2>
+    <p>
+      SGPA is calculated using:  
+      <strong>SGPA = Σ (Credit × Grade Point) / Σ Credits</strong>
+    </p>
+
+    <h2>RTU Grade to Grade-Point Mapping</h2>
+    <table class="seo-table">
+      <tr><th>Grade</th><th>Points</th></tr>
+      <tr><td>A++</td><td>10</td></tr>
+      <tr><td>A+</td><td>9</td></tr>
+      <tr><td>A</td><td>8.5</td></tr>
+      <tr><td>B+</td><td>8</td></tr>
+      <tr><td>B</td><td>7.5</td></tr>
+      <tr><td>C+</td><td>7</td></tr>
+      <tr><td>C</td><td>6.5</td></tr>
+      <tr><td>D+</td><td>6</td></tr>
+      <tr><td>D</td><td>5.5</td></tr>
+      <tr><td>E+</td><td>5</td></tr>
+      <tr><td>E</td><td>4</td></tr>
+      <tr><td>F</td><td>0</td></tr>
+    </table>
+
+    <h2>How CGPA is Calculated</h2>
+    <p>
+      CGPA is based on cumulative performance:  
+      <strong>CGPA = (Previous CGPA × Total Previous Credits + Current SGPA × Current Credits) / Total Credits</strong>
+    </p>
+
+    <h2>RTU CGPA Calculator FAQ</h2>
+    <ul>
+      <li><strong>Does this follow official RTU rules?</strong> Yes.</li>
+      <li><strong>Is SGPA calculation automatic?</strong> Yes, updates live.</li>
+      <li><strong>Are all branches supported?</strong> Yes – CSE, IT, AI&DS, ME, EE, ECE.</li>
+      <li><strong>Do labs count in credits?</strong> Yes, all lab credits included.</li>
+      <li><strong>Is SODECA included?</strong> Yes, exactly as per RTU credit rules.</li>
+    </ul>
+  </section>
+
+  <!-- ========================= -->
+  <!-- ⭐ MAIN TOOL BELOW -->
+  <!-- ========================= -->
+
+  <div class="wrap">
+    <div class="card">
+
+      <header>
+        <div class="logo">RTU</div>
+        <div>
+          <h1>RTU CGPA Calculator</h1>
+          <div class="lead">Select branch & semester, adjust grades, get SGPA/CGPA.</div>
         </div>
+      </header>
 
-        <div class="grid" style="margin-top: 16px">
-          <div class="left">
-            <div class="table-wrap">
-              <div class="semester-head" role="region" aria-live="polite">
-                <div>
-                  <div class="sem-title" id="semesterTitle">Semester</div>
-                  <div class="sem-info" id="semesterSub">
-                    Subjects & credits
-                  </div>
-                </div>
-                <div class="sem-meta">
-                  <div class="muted-small">
-                    Semester total credits: <strong id="semCredits">—</strong>
-                  </div>
-                  <div class="muted-small">
-                    Previous total credits (auto):
-                    <strong id="prevTotalCredits">—</strong>
-                  </div>
-                </div>
-              </div>
+      <div class="controls">
+        <label>Branch
+          <select id="branchSelect"></select>
+        </label>
 
-              <!-- ---------- STATIC (SEO) FALLBACK: CSE 1st Semester ---------- -->
-              <!-- Full table with grade dropdowns preselected to A++ (10) -->
-              <div id="subjectsArea" aria-live="polite">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Course Code</th>
-                      <th>Subject</th>
-                      <th class="credits-col">Credits</th>
-                      <th>Grade</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="code">1FY2-01</td>
-                      <td class="name">Engineering Mathematics-I</td>
-                      <td class="credits">4</td>
-                      <td class="select">
-                        <select class="grade" data-credits="4" data-code="1FY2-01" aria-label="Grade for Engineering Mathematics-I">
-                          <option value="">-- select --</option>
-                          <option value="10" selected>A++ (10)</option>
-                          <option value="9">A+ (9)</option>
-                          <option value="8.5">A (8.5)</option>
-                          <option value="8">B+ (8)</option>
-                          <option value="7.5">B (7.5)</option>
-                          <option value="7">C+ (7)</option>
-                          <option value="6.5">C (6.5)</option>
-                          <option value="6">D+ (6)</option>
-                          <option value="5.5">D (5.5)</option>
-                          <option value="5">E+ (5)</option>
-                          <option value="4">E (4)</option>
-                          <option value="0">F (0)</option>
-                        </select>
-                      </td>
-                    </tr>
+        <label>Semester
+          <select id="semesterSelect"></select>
+        </label>
 
-                    <tr>
-                      <td class="code">1FY2-02</td>
-                      <td class="name">Engineering Physics</td>
-                      <td class="credits">4</td>
-                      <td class="select">
-                        <select class="grade" data-credits="4" data-code="1FY2-02" aria-label="Grade for Engineering Physics">
-                          <option value="">-- select --</option>
-                          <option value="10" selected>A++ (10)</option>
-                          <option value="9">A+ (9)</option>
-                          <option value="8.5">A (8.5)</option>
-                          <option value="8">B+ (8)</option>
-                          <option value="7.5">B (7.5)</option>
-                          <option value="7">C+ (7)</option>
-                          <option value="6.5">C (6.5)</option>
-                          <option value="6">D+ (6)</option>
-                          <option value="5.5">D (5.5)</option>
-                          <option value="5">E+ (5)</option>
-                          <option value="4">E (4)</option>
-                          <option value="0">F (0)</option>
-                        </select>
-                      </td>
-                    </tr>
+        <div style="flex:1"></div>
 
-                    <tr>
-                      <td class="code">1FY1-04</td>
-                      <td class="name">Communication Skills</td>
-                      <td class="credits">2</td>
-                      <td class="select">
-                        <select class="grade" data-credits="2" data-code="1FY1-04" aria-label="Grade for Communication Skills">
-                          <option value="">-- select --</option>
-                          <option value="10" selected>A++ (10)</option>
-                          <option value="9">A+ (9)</option>
-                          <option value="8.5">A (8.5)</option>
-                          <option value="8">B+ (8)</option>
-                          <option value="7.5">B (7.5)</option>
-                          <option value="7">C+ (7)</option>
-                          <option value="6.5">C (6.5)</option>
-                          <option value="6">D+ (6)</option>
-                          <option value="5.5">D (5.5)</option>
-                          <option value="5">E+ (5)</option>
-                          <option value="4">E (4)</option>
-                          <option value="0">F (0)</option>
-                        </select>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="code">1FY3-06</td>
-                      <td class="name">Programming for Problem Solving</td>
-                      <td class="credits">2</td>
-                      <td class="select">
-                        <select class="grade" data-credits="2" data-code="1FY3-06" aria-label="Grade for Programming for Problem Solving">
-                          <option value="">-- select --</option>
-                          <option value="10" selected>A++ (10)</option>
-                          <option value="9">A+ (9)</option>
-                          <option value="8.5">A (8.5)</option>
-                          <option value="8">B+ (8)</option>
-                          <option value="7.5">B (7.5)</option>
-                          <option value="7">C+ (7)</option>
-                          <option value="6.5">C (6.5)</option>
-                          <option value="6">D+ (6)</option>
-                          <option value="5.5">D (5.5)</option>
-                          <option value="5">E+ (5)</option>
-                          <option value="4">E (4)</option>
-                          <option value="0">F (0)</option>
-                        </select>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="code">1FY3-08</td>
-                      <td class="name">Basic Electrical Engineering</td>
-                      <td class="credits">2</td>
-                      <td class="select">
-                        <select class="grade" data-credits="2" data-code="1FY3-08" aria-label="Grade for Basic Electrical Engineering">
-                          <option value="">-- select --</option>
-                          <option value="10" selected>A++ (10)</option>
-                          <option value="9">A+ (9)</option>
-                          <option value="8.5">A (8.5)</option>
-                          <option value="8">B+ (8)</option>
-                          <option value="7.5">B (7.5)</option>
-                          <option value="7">C+ (7)</option>
-                          <option value="6.5">C (6.5)</option>
-                          <option value="6">D+ (6)</option>
-                          <option value="5.5">D (5.5)</option>
-                          <option value="5">E+ (5)</option>
-                          <option value="4">E (4)</option>
-                          <option value="0">F (0)</option>
-                        </select>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="code">1FY2-20</td>
-                      <td class="name">Engineering Physics Lab</td>
-                      <td class="credits">1</td>
-                      <td class="select">
-                        <select class="grade" data-credits="1" data-code="1FY2-20" aria-label="Grade for Engineering Physics Lab">
-                          <option value="">-- select --</option>
-                          <option value="10" selected>A++ (10)</option>
-                          <option value="9">A+ (9)</option>
-                          <option value="8.5">A (8.5)</option>
-                          <option value="8">B+ (8)</option>
-                          <option value="7.5">B (7.5)</option>
-                          <option value="7">C+ (7)</option>
-                          <option value="6.5">C (6.5)</option>
-                          <option value="6">D+ (6)</option>
-                          <option value="5.5">D (5.5)</option>
-                          <option value="5">E+ (5)</option>
-                          <option value="4">E (4)</option>
-                          <option value="0">F (0)</option>
-                        </select>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="code">1FY2-22</td>
-                      <td class="name">Language Lab</td>
-                      <td class="credits">1</td>
-                      <td class="select">
-                        <select class="grade" data-credits="1" data-code="1FY2-22" aria-label="Grade for Language Lab">
-                          <option value="">-- select --</option>
-                          <option value="10" selected>A++ (10)</option>
-                          <option value="9">A+ (9)</option>
-                          <option value="8.5">A (8.5)</option>
-                          <option value="8">B+ (8)</option>
-                          <option value="7.5">B (7.5)</option>
-                          <option value="7">C+ (7)</option>
-                          <option value="6.5">C (6.5)</option>
-                          <option value="6">D+ (6)</option>
-                          <option value="5.5">D (5.5)</option>
-                          <option value="5">E+ (5)</option>
-                          <option value="4">E (4)</option>
-                          <option value="0">F (0)</option>
-                        </select>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="code">1FY3-24</td>
-                      <td class="name">Computer Programming Lab</td>
-                      <td class="credits">1.5</td>
-                      <td class="select">
-                        <select class="grade" data-credits="1.5" data-code="1FY3-24" aria-label="Grade for Computer Programming Lab">
-                          <option value="">-- select --</option>
-                          <option value="10" selected>A++ (10)</option>
-                          <option value="9">A+ (9)</option>
-                          <option value="8.5">A (8.5)</option>
-                          <option value="8">B+ (8)</option>
-                          <option value="7.5">B (7.5)</option>
-                          <option value="7">C+ (7)</option>
-                          <option value="6.5">C (6.5)</option>
-                          <option value="6">D+ (6)</option>
-                          <option value="5.5">D (5.5)</option>
-                          <option value="5">E+ (5)</option>
-                          <option value="4">E (4)</option>
-                          <option value="0">F (0)</option>
-                        </select>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="code">1FY3-26</td>
-                      <td class="name">Basic Electrical Engineering Lab</td>
-                      <td class="credits">1</td>
-                      <td class="select">
-                        <select class="grade" data-credits="1" data-code="1FY3-26" aria-label="Grade for Basic Electrical Engineering Lab">
-                          <option value="">-- select --</option>
-                          <option value="10" selected>A++ (10)</option>
-                          <option value="9">A+ (9)</option>
-                          <option value="8.5">A (8.5)</option>
-                          <option value="8">B+ (8)</option>
-                          <option value="7.5">B (7.5)</option>
-                          <option value="7">C+ (7)</option>
-                          <option value="6.5">C (6.5)</option>
-                          <option value="6">D+ (6)</option>
-                          <option value="5.5">D (5.5)</option>
-                          <option value="5">E+ (5)</option>
-                          <option value="4">E (4)</option>
-                          <option value="0">F (0)</option>
-                        </select>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="code">1FY3-29</td>
-                      <td class="name">Computer Aided Machine Drawing</td>
-                      <td class="credits">1.5</td>
-                      <td class="select">
-                        <select class="grade" data-credits="1.5" data-code="1FY3-29" aria-label="Grade for Computer Aided Machine Drawing">
-                          <option value="">-- select --</option>
-                          <option value="10" selected>A++ (10)</option>
-                          <option value="9">A+ (9)</option>
-                          <option value="8.5">A (8.5)</option>
-                          <option value="8">B+ (8)</option>
-                          <option value="7.5">B (7.5)</option>
-                          <option value="7">C+ (7)</option>
-                          <option value="6.5">C (6.5)</option>
-                          <option value="6">D+ (6)</option>
-                          <option value="5.5">D (5.5)</option>
-                          <option value="5">E+ (5)</option>
-                          <option value="4">E (4)</option>
-                          <option value="0">F (0)</option>
-                        </select>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="code">SODECA</td>
-                      <td class="name">SODECA</td>
-                      <td class="credits">0.5</td>
-                      <td class="select">
-                        <select class="grade" data-credits="0.5" data-code="SODECA" aria-label="Grade for SODECA">
-                          <option value="">-- select --</option>
-                          <option value="10" selected>A++ (10)</option>
-                          <option value="9">A+ (9)</option>
-                          <option value="8.5">A (8.5)</option>
-                          <option value="8">B+ (8)</option>
-                          <option value="7.5">B (7.5)</option>
-                          <option value="7">C+ (7)</option>
-                          <option value="6.5">C (6.5)</option>
-                          <option value="6">D+ (6)</option>
-                          <option value="5.5">D (5.5)</option>
-                          <option value="5">E+ (5)</option>
-                          <option value="4">E (4)</option>
-                          <option value="0">F (0)</option>
-                        </select>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- ---------- END STATIC FALLBACK ---------- -->
-            </div>
-
-            <div class="note">
-              All subjects, credits and grade scale remain unchanged. Default grade is A++.
-            </div>
-          </div>
-
-          <aside class="right">
-            <div class="panel" aria-label="SGPA">
-              <div class="label">SGPA</div>
-              <div class="big-num" id="sgpaDisplay">—</div>
-              <div class="small-muted" style="margin-top: 4px">
-                SGPA updates live as you change grades.
-              </div>
-            </div>
-
-            <div class="panel" style="margin-top: 12px" aria-label="CGPA">
-              <div class="label">CGPA</div>
-
-              <div style="margin-top: 8px">
-                <input
-                  id="prevCgpa"
-                  type="text"
-                  placeholder="Enter previous CGPA (e.g. 7.45)"
-                  aria-label="Previous CGPA"
-                  style="width: 100%; box-sizing: border-box"
-                />
-              </div>
-
-              <div style="margin-top: 8px; display: flex; gap: 8px">
-                <input
-                  id="curSgpa"
-                  type="text"
-                  placeholder="Current SGPA (auto)"
-                  aria-label="Current SGPA"
-                  style="flex: 1"
-                />
-                <button id="calcCgpaBtn" class="btn">Compute</button>
-              </div>
-
-              <div class="info-row" style="margin-top: 10px">
-                <div class="muted-small">New CGPA</div>
-                <div id="cgpaOut" style="font-weight: 800">—</div>
-              </div>
-
-              <div class="info-row">
-                <div class="muted-small">Credits used (previous)</div>
-                <div id="creditsUsedPrev">—</div>
-              </div>
-
-              <div class="info-row">
-                <div class="muted-small">Credits used (current sem)</div>
-                <div id="creditsUsedCur">—</div>
-              </div>
-            </div>
-
-            <div style="height: 10px"></div>
-            <div class="panel" aria-hidden="true">
-              <div class="label">Actions</div>
-              <div style="display: flex; gap: 8px; margin-top: 8px">
-                <button id="exportBtn" class="btn secondary">
-                  Copy result
-                </button>
-                <button id="printBtn" class="btn">Print</button>
-              </div>
-            </div>
-          </aside>
-        </div>
-
-        <div class="print-summary">
-          <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-            "
-          >
-            <div id="printSemesterName" style="font-weight: 800"></div>
-            <div id="printDate" style="font-size: 12px"></div>
-          </div>
-          <div
-            class="print-card"
-            id="printMetrics"
-            style="margin-top: 8px"
-          ></div>
-        </div>
-
-        <div class="footer">Responsive • Clean • Fast print</div>
-        <div class="footer-brand">Designed & Developed by Prashant Jain</div>
+        <button id="resetGrades" class="btn secondary">Reset grades</button>
       </div>
-    </div>
 
-    <!-- SEO-Rich Content (visible below calculator) -->
-    <main class="wrap" style="max-width:1100px;">
-      <section style="background:transparent; color:var(--text); padding:10px 0;">
-        <h2 style="color:var(--text-strong); margin:0 0 8px 0;">About this RTU CGPA Calculator</h2>
-        <p style="margin:0 0 8px 0; color:var(--muted);">
-          This RTU CGPA calculator uses RTU's official grade-to-point mapping to calculate SGPA for a semester and compute updated CGPA by combining previous earned credits and the current semester. Enter your previous CGPA and the calculator will compute the new cumulative GPA automatically.
-        </p>
+      <div class="grid">
+        <div class="left">
 
-        <h3 style="margin-top:12px; color:var(--text-strong);">How SGPA & CGPA are calculated</h3>
-        <p style="margin:6px 0 8px 0; color:var(--muted);">
-          SGPA is the weighted average of grade points for subjects in a semester: sum(grade_point × credits) ÷ sum(credits). CGPA is calculated across multiple semesters using total earned grade points divided by total credits. This tool automates both calculations using RTU credit weights.
-        </p>
+          <div class="table-wrap">
 
-        <h3 style="margin-top:12px; color:var(--text-strong);">RTU Grade mapping</h3>
-        <p style="margin:6px 0 8px 0; color:var(--muted);">
-          The grade scale used: A++ (10), A+ (9), A (8.5), B+ (8), B (7.5), C+ (7), C (6.5), D+ (6), D (5.5), E+ (5), E (4), F (0).
-        </p>
+            <!-- ========================= -->
+            <!-- ⭐ STATIC FALLBACK (SEO BOOST) -->
+            <!-- ========================= -->
 
-        <h3 style="margin-top:12px; color:var(--text-strong);">FAQ</h3>
-        <p style="margin:6px 0 8px 0; color:var(--muted);">
-          Q: Can I trust the results for official use?<br>
-          A: Use this calculator for quick checks. For official records always refer to RTU's published result PDF.
-        </p>
-      </section>
-    </main>
+            <div id="semesterTitle">1st Semester (CSE)</div>
+            <div class="muted-small">Static fallback table (For SEO & non-JS users)</div>
 
-    <script src="script.js"></script>
-  </body>
+            <table>
+              <thead>
+                <tr>
+                  <th>Course Code</th>
+                  <th>Subject</th>
+                  <th>Credits</th>
+                  <th>Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <!-- AUTOFILLED WITH DEFAULT A++ -->
+                <tr><td class="code">1FY2-01</td><td>Engineering Mathematics-I</td><td>4</td>
+                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+                </tr>
+
+                <tr><td class="code">1FY2-02</td><td>Engineering Physics</td><td>4</td>
+                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+                </tr>
+
+                <tr><td class="code">1FY1-04</td><td>Communication Skills</td><td>2</td>
+                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+                </tr>
+
+                <tr><td class="code">1FY3-06</td><td>Programming for Problem Solving</td><td>2</td>
+                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+                </tr>
+
+                <tr><td class="code">1FY3-08</td><td>Basic Electrical Engineering</td><td>2</td>
+                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+                </tr>
+
+                <tr><td class="code">1FY2-20</td><td>Engineering Physics Lab</td><td>1</td>
+                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+                </tr>
+
+                <tr><td class="code">1FY2-22</td><td>Language Lab</td><td>1</td>
+                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+                </tr>
+
+                <tr><td class="code">1FY3-24</td><td>Computer Programming Lab</td><td>1.5</td>
+                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+                </tr>
+
+                <tr><td class="code">1FY3-26</td><td>Basic Electrical Engineering Lab</td><td>1</td>
+                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+                </tr>
+
+                <tr><td class="code">1FY3-29</td><td>Computer Aided Machine Drawing</td><td>1.5</td>
+                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+                </tr>
+
+                <tr><td class="code">SODECA</td><td>SODECA</td><td>0.5</td>
+                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+                </tr>
+
+              </tbody>
+            </table>
+
+          </div><!-- table-wrap -->
+
+        </div><!-- left -->
+
+        <aside class="right">
+          <div class="panel">
+            <div class="label">SGPA</div>
+            <div class="big-num" id="sgpaDisplay">10.00</div>
+          </div>
+
+          <div class="panel">
+            <div class="label">CGPA</div>
+
+            <input id="prevCgpa" type="text" placeholder="Enter previous CGPA" />
+            <input id="curSgpa" type="text" placeholder="Current SGPA" />
+
+            <button id="calcCgpaBtn" class="btn">Compute</button>
+
+            <div class="info-row"><span>New CGPA</span> <span id="cgpaOut">—</span></div>
+            <div class="info-row"><span>Credits used (previous)</span> <span id="creditsUsedPrev">—</span></div>
+            <div class="info-row"><span>Credits used (current)</span> <span id="creditsUsedCur">—</span></div>
+          </div>
+
+          <div class="panel">
+            <div class="label">Actions</div>
+            <button id="exportBtn" class="btn secondary">Copy result</button>
+            <button id="printBtn" class="btn">Print</button>
+          </div>
+        </aside>
+
+      </div><!-- grid -->
+
+    </div><!-- card -->
+  </div><!-- wrap -->
+
+  <script src="script.js"></script>
+</body>
 </html>
