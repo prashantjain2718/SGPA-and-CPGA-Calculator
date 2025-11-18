@@ -4,8 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>SGPA & CGPA Calculator</title>
-
-    <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="wrap">
@@ -15,13 +14,16 @@
           <div>
             <h1>SGPA &amp; CGPA Calculator</h1>
             <div class="lead">
-              Select semester, adjust grades (defaults to A++), get SGPA and
-              updated CGPA.
+              Select branch & semester, adjust grades, get SGPA/CGPA.
             </div>
           </div>
         </header>
 
         <div class="controls">
+          <label for="branchSelect" class="small-muted"
+            >Branch
+            <select id="branchSelect" aria-label="Select branch"></select>
+          </label>
           <label for="semesterSelect" class="small-muted"
             >Semester
             <select id="semesterSelect" aria-label="Select semester"></select>
@@ -72,7 +74,7 @@
             <div class="panel" aria-label="SGPA">
               <div class="label">SGPA</div>
               <div class="big-num" id="sgpaDisplay">—</div>
-              <div class="small-muted">
+              <div class="small-muted" style="margin-top: 4px">
                 SGPA updates live as you change grades.
               </div>
             </div>
@@ -141,11 +143,11 @@
             <div id="printSemesterName" style="font-weight: 800"></div>
             <div id="printDate" style="font-size: 12px"></div>
           </div>
-          <div class="print-card" id="printMetrics" style="margin-top: 8px">
-            <div class="footer-brand" style="margin-top: 10px">
-              Designed & Developed by Prashant Jain
-            </div>
-          </div>
+          <div
+            class="print-card"
+            id="printMetrics"
+            style="margin-top: 8px"
+          ></div>
         </div>
 
         <div class="footer">Responsive • Clean • Fast print</div>
