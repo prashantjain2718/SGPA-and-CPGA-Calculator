@@ -1888,3 +1888,66 @@ function preparePrint() {
     <div style="font-size:14px;">CGPA: <strong>${cgpa}</strong></div>
   `;
 }
+
+/* ============================================
+    EVENT LISTENERS
+   ============================================ */
+
+branchSelect.addEventListener("change", () => {
+  const branch = branchSelect.value;
+  populateSemesters(branch);
+
+  const firstSem = semesterSelect.value;
+  if (firstSem) {
+    renderSemester(branch, Number(firstSem));
+  }
+});
+
+semesterSelect.addEventListener("change", () => {
+  const branch = branchSelect.value;
+  renderSemester(branch, Number(semesterSelect.value));
+});
+
+calcCgpaBtn.addEventListener("click", computeCGPA);
+resetBtn.addEventListener("click", resetGrades);
+exportBtn.addEventListener("click", copyResult);
+
+printBtn.addEventListener("click", () => {
+  preparePrint();
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      window.print();
+    });
+  });
+});
+
+// Fix print summary before print
+window.addEventListener("beforeprint", preparePrint);
+
+// Enter key triggers CGPA calculation
+[prevCgpaInput, curSgpaInput].forEach((input) => {
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      calcCgpaBtn.click();
+    }
+  });
+});
+
+
+/* ============================================
+    INITIAL PAGE LOAD
+   ============================================ */
+
+populateBranches();
+
+// Default branch CSE or first available branch
+const defaultBranch = ALL_DATA.CSE ? "CSE" : Object.keys(ALL_DATA)[0];
+branchSelect.value = defaultBranch;
+
+populateSemesters(defaultBranch);
+
+const defaultSem = semesterSelect.value;
+if (defaultSem) {
+  renderSemester(defaultBranch, Number(defaultSem));
+}
