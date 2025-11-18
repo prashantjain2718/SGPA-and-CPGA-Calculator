@@ -121,76 +121,79 @@
       <div class="grid">
         <div class="left">
 
-          <div class="table-wrap">
-            
+         <div class="table-wrap">
 
-            <!-- ========================= -->
-            <!-- ⭐ STATIC FALLBACK (SEO BOOST) -->
-            <!-- ========================= -->
+  <!-- ========================= -->
+  <!-- ⭐ STATIC FALLBACK (SEO BOOST) -->
+  <!-- ========================= -->
 
-            <div id="semesterTitle">1st Semester (CSE)</div>
-            <div class="muted-small">Static fallback table (For SEO & non-JS users)</div>
+  <div id="semesterTitle">1st Semester (CSE)</div>
+  <div class="muted-small">Static fallback table (For SEO & non-JS users)</div>
 
-            <table>
-            <!-- dynamic table container -->
+  <table id="fallbackTable">
+    <thead>
+      <tr>
+        <th>Course Code</th>
+        <th>Subject</th>
+        <th>Credits</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="code">1FY2-01</td><td>Engineering Mathematics-I</td><td>4</td>
+        <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+      </tr>
+
+      <tr><td class="code">1FY2-02</td><td>Engineering Physics</td><td>4</td>
+        <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+      </tr>
+
+      <tr><td class="code">1FY1-04</td><td>Communication Skills</td><td>2</td>
+        <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+      </tr>
+
+      <tr><td class="code">1FY3-06</td><td>Programming for Problem Solving</td><td>2</td>
+        <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+      </tr>
+
+      <tr><td class="code">1FY3-08</td><td>Basic Electrical Engineering</td><td>2</td>
+        <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+      </tr>
+
+      <tr><td class="code">1FY2-20</td><td>Engineering Physics Lab</td><td>1</td>
+        <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+      </tr>
+
+      <tr><td class="code">1FY2-22</td><td>Language Lab</td><td>1</td>
+        <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+      </tr>
+
+      <tr><td class="code">1FY3-24</td><td>Computer Programming Lab</td><td>1.5</td>
+        <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+      </tr>
+
+      <tr><td class="code">1FY3-26</td><td>Basic Electrical Engineering Lab</td><td>1</td>
+        <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+      </tr>
+
+      <tr><td class="code">1FY3-29</td><td>Computer Aided Machine Drawing</td><td>1.5</td>
+        <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+      </tr>
+
+      <tr><td class="code">SODECA</td><td>SODECA</td><td>0.5</td>
+        <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ========================= -->
+  <!-- ⭐ DYNAMIC TABLE (JS injects here) -->
+  <!-- ========================= -->
+
   <div id="subjectsArea"></div>
-              <thead>
-                <tr>
-                  <th>Course Code</th>
-                  <th>Subject</th>
-                  <th>Credits</th>
-                  <th>Grade</th>
-                </tr>
-              </thead>
-              <tbody>
 
-                <!-- AUTOFILLED WITH DEFAULT A++ -->
-                <tr><td class="code">1FY2-01</td><td>Engineering Mathematics-I</td><td>4</td>
-                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
-                </tr>
+</div>
 
-                <tr><td class="code">1FY2-02</td><td>Engineering Physics</td><td>4</td>
-                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
-                </tr>
-
-                <tr><td class="code">1FY1-04</td><td>Communication Skills</td><td>2</td>
-                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
-                </tr>
-
-                <tr><td class="code">1FY3-06</td><td>Programming for Problem Solving</td><td>2</td>
-                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
-                </tr>
-
-                <tr><td class="code">1FY3-08</td><td>Basic Electrical Engineering</td><td>2</td>
-                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
-                </tr>
-
-                <tr><td class="code">1FY2-20</td><td>Engineering Physics Lab</td><td>1</td>
-                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
-                </tr>
-
-                <tr><td class="code">1FY2-22</td><td>Language Lab</td><td>1</td>
-                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
-                </tr>
-
-                <tr><td class="code">1FY3-24</td><td>Computer Programming Lab</td><td>1.5</td>
-                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
-                </tr>
-
-                <tr><td class="code">1FY3-26</td><td>Basic Electrical Engineering Lab</td><td>1</td>
-                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
-                </tr>
-
-                <tr><td class="code">1FY3-29</td><td>Computer Aided Machine Drawing</td><td>1.5</td>
-                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
-                </tr>
-
-                <tr><td class="code">SODECA</td><td>SODECA</td><td>0.5</td>
-                  <td><select class="grade"><option value="10" selected>A++ (10)</option></select></td>
-                </tr>
-
-              </tbody>
-            </table>
 
           </div><!-- table-wrap -->
 
@@ -230,5 +233,6 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
