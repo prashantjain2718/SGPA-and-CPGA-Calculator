@@ -1,207 +1,103 @@
 # 🎓 RTU CGPA & SGPA Calculator
 
-![Project Status](https://img.shields.io/badge/Status-Active-success)
-![License](https://img.shields.io/badge/License-MIT-blue)
-![Tech](https://img.shields.io/badge/Tech-HTML%20%7C%20CSS%20%7C%20JS-yellow)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-38bdf8?style=for-the-badge&logo=vercel)](https://rtu-cpga-calculator.vercel.app/)
+[![Tech Stack](https://img.shields.io/badge/Tech-HTML5_%7C_CSS3_%7C_JS-yellow?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]()
 
-A modern, accurate, and responsive web application designed for **Rajasthan Technical University (RTU)** students to calculate their Semester Grade Point Average (SGPA) and Cumulative Grade Point Average (CGPA).
+A clean, accurate, and responsive web application designed for **Rajasthan Technical University (RTU)** students. This tool calculates Semester Grade Point Average (SGPA) and Cumulative Grade Point Average (CGPA) based on the official **Choice Based Credit System (CBCS)**.
 
-This tool comes pre-loaded with the official **Choice Based Credit System (CBCS)** schema, including subject names, codes, and credit values for semesters 1 through 8.
+It comes pre-loaded with the exact subject codes, names, and credit values for **Semesters 1 through 8** across all major engineering branches.
 
-🔗 **[Live Demo Link](https://sgpa-and-cpga-calculator.vercel.app/)**
-
----
-
-## ✨ Key Features
-
-* **🚀 Instant Calculation:** Real-time SGPA updates as you select grades.
-* **📚 Comprehensive Database:** Pre-loaded subjects and credits for **Semesters 1–8**.
-* **🌿 Multi-Branch Support:** Currently supports:
-    * Computer Science (CSE)
-    * Information Technology (IT)
-    * AI & Data Science (AI&DS)
-    * Mechanical Engineering (ME)
-    * Electronics & Communication (ECE)
-    * Electrical Engineering (EE)
-* **🌓 Modern UI:** Features a clean, dark-themed interface ("Pro Slate & Cyan") that is fully responsive on mobile and desktop.
-* **📊 CGPA Computation:** Accurately calculates new CGPA by factoring in previous semesters' credits and CGPA.
-* **🖨️ Report Generation:** Includes a "Print Report" feature optimized for A4 paper and a "Copy Result" button for easy sharing.
-
----
-
-## 📸 Screenshots
-
-<div align="center">
-  <img src="https://via.placeholder.com/600x300.png?text=Desktop+View" alt="Desktop Screenshot" width="45%">
-  <img src="https://via.placeholder.com/250x500.png?text=Mobile+View" alt="Mobile Screenshot" width="25%">
-</div>
-
----
-
-## 🛠️ Tech Stack
-
-This project is built using pure frontend technologies with no backend dependencies:
-
-* **HTML5:** Semantic structure and SEO optimization.
-* **CSS3:** Custom variables, Flexbox/Grid, and responsive media queries.
-* **JavaScript (ES6+):** Dynamic DOM manipulation and calculation logic.
-
----
-
-## ⚙️ Installation & Local Setup
-
-If you want to run this locally or contribute:
-
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/prashantjain2718/rtu-cgpa-calculator.git](https://github.com/prashantjain2718/rtu-cgpa-calculator.git)
-    ```
-
-2.  **Navigate to the project directory**
-    ```bash
-    cd rtu-cgpa-calculator
-    ```
-
-3.  **Open the file**
-    Simply open `index.html` in your preferred web browser. No `npm` or local server is strictly required.
-
----
-
-## 📖 How It Works
-
-### 1. The Formula
-The calculator uses the official RTU formulas:
-
-* **SGPA** = $\frac{\sum(Credit \times GradePoint)}{\sum(TotalCredits)}$
-* **CGPA** = $\frac{(PrevCGPA \times PrevCredits) + (CurrSGPA \times CurrCredits)}{TotalCredits}$
-
-### 2. Grading Scale
-| Grade | Points | Description |
-| :--- | :---: | :--- |
-| **A++** | 10 | Outstanding |
-| **A+** | 9 | Excellent |
-| **A** | 8.5 | Very Good |
-| **B+** | 8 | Good |
-| **B** | 7.5 | Above Average |
-| ... | ... | ... |
-| **F** | 0 | Fail |
-
----
-
-## 📂 Project Structure
-Here is the complete, consolidated README.md code in a single block, including the Project Structure section you requested.
-
-Markdown
-
-# 🎓 RTU CGPA & SGPA Calculator
-
-![Project Status](https://img.shields.io/badge/Status-Active-success)
-![License](https://img.shields.io/badge/License-MIT-blue)
-![Tech](https://img.shields.io/badge/Tech-HTML%20%7C%20CSS%20%7C%20JS-yellow)
-
-A modern, accurate, and responsive web application designed for **Rajasthan Technical University (RTU)** students to calculate their Semester Grade Point Average (SGPA) and Cumulative Grade Point Average (CGPA).
-
-This tool comes pre-loaded with the official **Choice Based Credit System (CBCS)** schema, including subject names, codes, and credit values for semesters 1 through 8.
-
-🔗 **[Live Demo Link](https://sgpa-and-cpga-calculator.vercel.app/)**
+🔗 **[Launch Live Calculator](https://rtu-cpga-calculator.vercel.app/)**
 
 ---
 
 ## ✨ Key Features
 
-* **🚀 Instant Calculation:** Real-time SGPA updates as you select grades.
-* **📚 Comprehensive Database:** Pre-loaded subjects and credits for **Semesters 1–8**.
-* **🌿 Multi-Branch Support:** Currently supports:
-    * Computer Science (CSE)
-    * Information Technology (IT)
-    * AI & Data Science (AI&DS)
-    * Mechanical Engineering (ME)
-    * Electronics & Communication (ECE)
-    * Electrical Engineering (EE)
-* **🌓 Modern UI:** Features a clean, dark-themed interface ("Pro Slate & Cyan") that is fully responsive on mobile and desktop.
-* **📊 CGPA Computation:** Accurately calculates new CGPA by factoring in previous semesters' credits and CGPA.
-* **🖨️ Report Generation:** Includes a "Print Report" feature optimized for A4 paper and a "Copy Result" button for easy sharing.
+-   **⚡ Instant Calculation:** Real-time SGPA updates as you select grades (no page reloads).
+-   **🏛️ Multi-Branch Support:** tailored subject data for:
+    -   Computer Science (CSE)
+    -   Information Technology (IT)
+    -   AI & Data Science (AI&DS)
+    -   Mechanical Engineering (ME)
+    -   Electronics & Communication (ECE)
+    -   Electrical Engineering (EE)
+-   **🎯 Precision Grading:** Implements the specific RTU decimal grading points (e.g., **A = 8.5**, **B = 7.5**) ensuring 100% accuracy.
+-   **🌗 Pro Dark UI:** Features a modern "Slate & Cyan" dark theme (`#0f172a`) that is easy on the eyes.
+-   **🖨️ Print-Ready Reports:** Includes a dedicated **Print Mode** that:
+    -   Hides buttons and dark backgrounds.
+    -   Formats the result slip perfectly for A4 paper.
+    -   Adds a timestamp and "RTU Semester Grade Report" header.
+-   **📋 Copy to Clipboard:** A single click exports your result string for easy sharing.
 
 ---
 
-## 📸 Screenshots
+## 📸 Interface
 
-<div align="center">
-  <img src="https://via.placeholder.com/600x300.png?text=Desktop+View" alt="Desktop Screenshot" width="45%">
-  <img src="https://via.placeholder.com/250x500.png?text=Mobile+View" alt="Mobile Screenshot" width="25%">
-</div>
-
----
-
-## 🛠️ Tech Stack
-
-This project is built using pure frontend technologies with no backend dependencies:
-
-* **HTML5:** Semantic structure and SEO optimization.
-* **CSS3:** Custom variables, Flexbox/Grid, and responsive media queries.
-* **JavaScript (ES6+):** Dynamic DOM manipulation and calculation logic.
+| Dark Mode UI | Print Preview (A4) |
+| :---: | :---: |
+| *Clean, responsive dark interface with instant feedback.* | *Optimized black & white layout for official printing.* |
 
 ---
 
-## ⚙️ Installation & Local Setup
+## 🔢 Official RTU Grading Scale
 
-If you want to run this locally or contribute:
+This calculator uses the exact 10-point grading scale defined in the RTU regulations:
 
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/prashantjain2718/rtu-cgpa-calculator.git](https://github.com/prashantjain2718/rtu-cgpa-calculator.git)
-    ```
-
-2.  **Navigate to the project directory**
-    ```bash
-    cd rtu-cgpa-calculator
-    ```
-
-3.  **Open the file**
-    Simply open `index.html` in your preferred web browser. No `npm` or local server is strictly required.
-
----
-
-## 📖 How It Works
-
-### 1. The Formula
-The calculator uses the official RTU formulas:
-
-* **SGPA** = $\frac{\sum(Credit \times GradePoint)}{\sum(TotalCredits)}$
-* **CGPA** = $\frac{(PrevCGPA \times PrevCredits) + (CurrSGPA \times CurrCredits)}{TotalCredits}$
-
-### 2. Grading Scale
 | Grade | Points | Description |
-| :--- | :---: | :--- |
+| :--- | :--- | :--- |
 | **A++** | 10 | Outstanding |
 | **A+** | 9 | Excellent |
 | **A** | 8.5 | Very Good |
 | **B+** | 8 | Good |
 | **B** | 7.5 | Above Average |
-| ... | ... | ... |
+| **C+** | 7 | Average |
+| **C** | 6.5 | Below Average |
+| **D+** | 6 | Marginal |
+| **D** | 5.5 | Pass |
+| **E+** | 5 | Pass (Old Reg) |
+| **E** | 4 | Pass (Old Reg) |
 | **F** | 0 | Fail |
+
+---
+
+## ⚙️ How It Works
+
+### 1. The Formulas
+The app runs on pure JavaScript to perform weighted average calculations:
+
+-   **SGPA** = $\frac{\sum(Credit \times GradePoint)}{\sum(TotalCredits)}$
+-   **CGPA** = $\frac{(PrevCGPA \times PrevCredits) + (CurrSGPA \times CurrCredits)}{TotalCredits}$
+
+### 2. Local Installation
+Since this is a static web app, you don't need `npm` or a backend server.
+
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/prashantjain2718/rtu-cgpa-calculator.git](https://github.com/prashantjain2718/rtu-cgpa-calculator.git)
+    ```
+2.  **Run the App**
+    Simply open the `index.html` file in any web browser.
 
 ---
 
 ## 📂 Project Structure
 
-├── index.html # Main structure and SEO content 
-├── styles.css # Styling, variables, dark theme, and print styles 
-├── script.js # Subject data (JSON-like), logic, and DOM handling 
-└── README.md # Documentation
-
----
+rtu-cgpa-calculator/
+├── index.html      # Main structure, SEO meta tags, and JSON-LD
+├── styles.css      # Dark theme variables, responsive grid, and @media print
+├── script.js       # Branch data (JSON structure), event listeners, and logic
+└── README.md       # Documentation
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you notice missing subjects or incorrect credit values for a specific branch:
+The accuracy of this calculator depends on the subject data. If you notice a missing subject, incorrect credit value, or a typo:
 
-1.  Fork the Project.
-2.  Create your Feature Branch (`git checkout -b feature/NewBranch`).
-3.  Update the `ALL_DATA` object in `script.js`.
-4.  Commit your Changes (`git commit -m 'Add Civil Engineering subjects'`).
-5.  Push to the Branch (`git push origin feature/NewBranch`).
-6.  Open a Pull Request.
+1.  **Fork** the repository to your own GitHub account.
+2.  Open `script.js` and locate the `ALL_DATA` constant (it contains the arrays for CSE, IT, ME, etc.).
+3.  Find the specific **Branch** and **Semester** block that needs fixing.
+4.  Update the `code`, `name`, or `credits` value.
+5.  Submit a **Pull Request** describing your change.
 
 ---
 
@@ -209,8 +105,15 @@ Contributions are welcome! If you notice missing subjects or incorrect credit va
 
 **Prashant Jain**
 
-* GitHub: [@prashantjain2718](https://github.com/prashantjain2718)
+* Student, Arya College of Engineering & IT
+* **GitHub:** [@prashantjain2718](https://github.com/prashantjain2718)
 
 ---
 
-Give a ⭐️ if this project helped you!
+<div align="center">
+  <p><b>Found this calculator useful?</b></p>
+  <p>Help others find it by giving the repository a star!</p>
+  <a href="https://github.com/prashantjain2718/rtu-cgpa-calculator">
+    <img src="https://img.shields.io/github/stars/prashantjain2718/rtu-cgpa-calculator?style=social" alt="Star on GitHub">
+  </a>
+</div>
