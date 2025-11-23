@@ -94,7 +94,7 @@ rtu-cgpa-calculator/
 │                   └── Event Listeners (Dynamic Rendering, Print, Clipboard)
 │
 └── README.md       # Project Documentation
-
+```
 ## 🤝 Contributing
 
 The accuracy of this calculator depends on the subject data. If you notice a missing subject, incorrect credit value, or a typo:
